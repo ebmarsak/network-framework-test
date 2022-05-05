@@ -10,7 +10,7 @@ import Network
 
 class ClientVC: UIViewController {
     
-    var connection = NWConnection(host: NWEndpoint.Host("local"), port: 8888, using: .tcp)
+    var connection = NWConnection(host: NWEndpoint.Host("localhost"), port: 8888, using: .tcp)
     var queue = DispatchQueue(label: "tcp client queue")
     
     override func viewDidLoad() {
@@ -18,10 +18,9 @@ class ClientVC: UIViewController {
         view.backgroundColor = .systemBackground
         
         setupClient()
-        sendInitialMessage()
 }
     
-    func setupClient() {
+    private func setupClient() {
         
         // state update handler
         connection.stateUpdateHandler = { state in
@@ -32,7 +31,7 @@ class ClientVC: UIViewController {
                 print("cancelled")
             case .ready:
                 print("ready to send")
-                self.sendInitialMessage()
+                self.send(message: "naber".data(using: .utf8)!)
             case .failed(let error):
                 print("Client connection failed with error: \(error)")
             default:
@@ -42,32 +41,16 @@ class ClientVC: UIViewController {
         
         // start connection
         connection.start(queue: queue)
-        print("client connection started on 8888")
+        print("did call connection.start")
 
     }
-   
-    func sendInitialMessage() {
-        let message = "hello".data(using: .utf8)
-        connection.send(content: message, completion: .contentProcessed({ error in
-            if let error = error {
-                print("Send error: \(error)")
-            }
-        }))
-        connection.receiveMessage { completeContent, contentContext, isComplete, error in
-            if completeContent != nil {
-                print("got connected!")
-            }
-        }
-            
-    }
     
-    func send(message: Data) {
+    private func send(message: Data) {
         connection.send(content: message, completion: .contentProcessed({ error in
             if let error = error {
                 print("send error: \(error)")
             }
-            
+            print("sent message")
         }))
-        
     }
 }

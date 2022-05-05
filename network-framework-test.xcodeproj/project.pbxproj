@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C631EA8B282116960052DB5C /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = C631EA8A282116960052DB5C /* test.swift */; };
 		C6551941281E68EB0054C7A3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6551940281E68EB0054C7A3 /* AppDelegate.swift */; };
 		C6551943281E68EB0054C7A3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6551942281E68EB0054C7A3 /* SceneDelegate.swift */; };
 		C655194A281E68EC0054C7A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6551949281E68EC0054C7A3 /* Assets.xcassets */; };
@@ -18,7 +17,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C631EA8A282116960052DB5C /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
 		C655193D281E68EB0054C7A3 /* network-framework-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "network-framework-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6551940281E68EB0054C7A3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6551942281E68EB0054C7A3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,7 +74,6 @@
 				C6551954281E6AA60054C7A3 /* LandingVC.swift */,
 				C6551957281E6C060054C7A3 /* ClientVC.swift */,
 				C6551959281E6C180054C7A3 /* ServerVC.swift */,
-				C631EA8A282116960052DB5C /* test.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -152,7 +149,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6551955281E6AA70054C7A3 /* LandingVC.swift in Sources */,
-				C631EA8B282116960052DB5C /* test.swift in Sources */,
 				C6551958281E6C060054C7A3 /* ClientVC.swift in Sources */,
 				C6551941281E68EB0054C7A3 /* AppDelegate.swift in Sources */,
 				C655195A281E6C180054C7A3 /* ServerVC.swift in Sources */,
